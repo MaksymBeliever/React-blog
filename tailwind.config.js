@@ -15,12 +15,13 @@ module.exports = {
       colors: {
         theme: {
           blue: '#61DAFB',
-          darkBlue: '#387f93',
-          lightenGray: '#ddd',
-          lightGray: '#bbb',
-          tag: '#aaa',
+          darkBlue: '#387F93',
+          pageHoverBg: '#ECEEEF',
+          lightenGray: '#DDDDDD',
+          lightGray: '#BBBBBB',
+          tag: '#AAAAAA',
           gray: '#282C34',
-          darkGray: '#21232A',
+          darkGray: '#21232A'
         }
       },
       spacing: {

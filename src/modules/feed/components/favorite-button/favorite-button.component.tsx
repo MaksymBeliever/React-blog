@@ -1,6 +1,4 @@
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
-import { Heart } from 'react-ionicons';
 
 interface FavoriteButtonProps {
     count: number;
