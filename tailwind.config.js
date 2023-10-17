@@ -8,14 +8,36 @@ module.exports = {
       fontFamily: {
         titillium: ['Titillium Web', 'sans-serif']
       },
+      fontSize: {
+        logo: '3.5rem',
+        date: '0.8rem'
+      },
       colors: {
         theme: {
           blue: '#61DAFB',
+          darkBlue: '#387f93',
+          lightenGray: '#ddd',
+          lightGray: '#bbb',
+          tag: '#aaa',
           gray: '#282C34',
+          darkGray: '#21232A',
         }
       },
       spacing: {
-        navItem: '0.425rem'
+        navItem: '0.425rem',
+        0.3: '0.3rem',
+        0.2: '0.2rem',
+        tag: '0.6rem'
+      },
+      boxShadow: {
+        banner: 'inset 0 8px 8px -8px rgb(0 0 0 / 30%), inset 0 -8px 8px -8px rgb(0 0 0 / 30%)',
+      },
+      dropShadow: {
+        logo: '0px 1px 3px rgb(0 0 0 / 30%)'
+      },
+      borderRadius: {
+        buttonSm: '0.2rem',
+        tag: '10rem'
       }
     },
   },
