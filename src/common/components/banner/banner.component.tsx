@@ -1,11 +1,7 @@
 import { FC } from 'react';
 import { Container } from '../container/container.component';
 
-interface BannerProps {
-
-}
-
-export const Banner: FC<BannerProps> =({}) => {
+export const Banner: FC =() => {
 
     return (
         <section className="bg-theme-gray shadow-banner text-white p-8 mb-8">

@@ -16,10 +16,13 @@ module.exports = {
         theme: {
           blue: '#61DAFB',
           darkBlue: '#387F93',
+          tagCloudBg: '#F3F3F3',
           pageHoverBg: '#ECEEEF',
           lightenGray: '#DDDDDD',
           lightGray: '#BBBBBB',
           tag: '#AAAAAA',
+          tagItemBg: '#818a91',
+          tagItemBgDarken: '#687077',
           gray: '#282C34',
           darkGray: '#21232A'
         }

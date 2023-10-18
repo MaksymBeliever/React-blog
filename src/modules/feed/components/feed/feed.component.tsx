@@ -6,7 +6,8 @@ import { useGetGlobalFeedQuery } from '../../api/repository';
 import ReactPaginate from 'react-paginate';
 import { FEED_PAGE_SIZE } from '../../consts';
 import { useSearchParams } from 'react-router-dom';
-import {serializeSearchParams} from "../../../../utils/router";
+import { serializeSearchParams } from '../../../../utils/router';
+import { TagCloud } from '../tag-cloud/tag-cloud.component';
 
 export const Feed: FC = () => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -16,7 +17,10 @@ export const Feed: FC = () => {
         setPage(selected);
         setSearchParams(serializeSearchParams({ page: String(selected) }));
     }
-    const { data, error, isLoading, isFetching } = useGetGlobalFeedQuery({ page });
+    const { data, error, isLoading, isFetching } = useGetGlobalFeedQuery({
+        page,
+        tag: searchParams.get('tag')
+    });
     const amount = data?.articlesCount || 0;
 
     if (isLoading || isFetching) {
@@ -43,7 +47,7 @@ export const Feed: FC = () => {
                             pageClassName="group"
                             pageLinkClassName="p-3 text-theme-blue bg-white border border-theme-blue -ml-px
                             group-[&:nth-child(2)]:rounded-l group-[&:nth-last-child(2)]:rounded-r
-                            hover:bg-theme-pageHoverBg"
+                            hover:bg-theme-pageHoverBg hover:no-underline"
                             activeClassName="active group"
                             activeLinkClassName="group-[.active]:bg-theme-blue group-[.active]:text-white"
                             onPageChange={handlePageChange}
@@ -51,7 +55,9 @@ export const Feed: FC = () => {
                         />
                     </nav>
                 </div>
-                <div className="w-1/4 columns-2xs">tags</div>
+                <div className="w-1/4 pl-3">
+                    <TagCloud />
+                </div>
             </div>
         </Container>
     );
